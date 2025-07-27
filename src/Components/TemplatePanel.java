@@ -1,3 +1,7 @@
+package Components;
+
+import Components.MainMenuPanel;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -10,13 +14,5 @@ public class TemplatePanel extends JPanel {
         add(new MainMenuPanel(cardsPanel, cardLayout), BorderLayout.NORTH);
         add(cardsPanel, BorderLayout.CENTER);
         add(new FooterPanel(), BorderLayout.SOUTH);
-    }
-
-    // Pomocnicza metoda do tworzenia przykładowych paneli
-    private JPanel createSamplePanel(Color bg, String labelText) {
-        JPanel panel = new JPanel();
-        panel.setBackground(bg);
-        panel.add(new JLabel(labelText));
-        return panel;
     }
 }

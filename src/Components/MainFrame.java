@@ -1,3 +1,7 @@
+package Components;
+
+import Components.TemplatePanel;
+
 import javax.swing.*;
 import java.awt.*;
 

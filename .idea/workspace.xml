@@ -4,16 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23a59a91-115c-488d-8ac6-db7fa6eb3a36" name="Changes" comment="Add Colors class. Set Background color">
-      <change afterPath="$PROJECT_DIR$/src/CalculatorPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ChartPanl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FooterPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainMenuPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ResumePanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TablePanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TemplatePanel.java" afterDir="false" />
+    <list default="true" id="23a59a91-115c-488d-8ac6-db7fa6eb3a36" name="Changes" comment="Add create navigation button method">
+      <change afterPath="$PROJECT_DIR$/src/Activity/API/NBPAPI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Activity/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Activity/Chart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Activity/Summary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Activity/Table.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CalculatorPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/CalculatorPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ChartPanl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/ChartPanl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Colors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Colors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FooterPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/FooterPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainMenuPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainMenuPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ResumePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/SummaryPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TablePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/TablePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TemplatePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TemplatePanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,13 +48,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="TurboCash" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -78,7 +99,77 @@
       <option name="project" value="LOCAL" />
       <updated>1753561139073</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add FooterPanel">
+      <created>1753570278980</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1753570278980</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add MainMenuPanel">
+      <created>1753570299554</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1753570299554</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add TemplatePanel">
+      <created>1753570326451</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1753570326451</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add CalculatorPanel">
+      <created>1753570353162</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1753570353162</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add ChartPanl">
+      <created>1753570381547</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1753570381547</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add ResumePanel">
+      <created>1753570397199</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1753570397199</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add TablePanel">
+      <created>1753570405597</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1753570405597</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Update MainFrame">
+      <created>1753570422518</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1753570422518</updated>
+    </task>
+    <task id="LOCAL-00012" summary="UpdateFile">
+      <created>1753570439072</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1753570439072</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add create navigation button method">
+      <created>1753570504578</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1753570504578</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -97,6 +188,19 @@
     <MESSAGE value="Create initial project structure" />
     <MESSAGE value="Add configuration files" />
     <MESSAGE value="Add Colors class. Set Background color" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Colors class. Set Background color" />
+    <MESSAGE value="Add FooterPanel" />
+    <MESSAGE value="Add MainMenuPanel" />
+    <MESSAGE value="Add TemplatePanel" />
+    <MESSAGE value="Add CalculatorPanel" />
+    <MESSAGE value="Add ChartPanl" />
+    <MESSAGE value="Add ResumePanel" />
+    <MESSAGE value="Add TablePanel" />
+    <MESSAGE value="Update MainFrame" />
+    <MESSAGE value="UpdateFile" />
+    <MESSAGE value="Add create navigation button method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add create navigation button method" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TurboCash$Main.ic" NAME="Main Coverage Results" MODIFIED="1753570030574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
