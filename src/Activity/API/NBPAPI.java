@@ -17,4 +17,11 @@ public class NBPAPI {
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
         return response;
     }
+
+    public HttpResponse<String> getTable(String tableKind) throws IOException, InterruptedException {
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        return response;
+    }
+
+
 }
