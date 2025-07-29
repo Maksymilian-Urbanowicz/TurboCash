@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23a59a91-115c-488d-8ac6-db7fa6eb3a36" name="Changes" comment="Add NBPAPI class">
+    <list default="true" id="23a59a91-115c-488d-8ac6-db7fa6eb3a36" name="Changes" comment="Add getCurrencyInfo method in Calculator class to communicate with getCurrency method in NBPAPI class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Activity/API/NBPAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Activity/API/NBPAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurboCash.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCash.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Activity/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Activity/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MainMenuPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainMenuPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/TemplatePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TemplatePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +28,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Maksymilian-Urbanowicz"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Maksymilian-Urbanowicz/TurboCash",
+    "accountId": "850b01c0-667a-428b-aeeb-e7ea59eb1c4f"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
   <component name="ProjectId" id="30QT3tshPBrrBJXl0iu5PnUM7er" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -34,13 +54,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/IdeProject/TurboCash/lib",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeProject\TurboCash\lib" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -55,6 +94,14 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -63,6 +110,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1753558603996</updated>
+      <workItem from="1753790001669" duration="6600000" />
     </task>
     <task id="LOCAL-00001" summary="Create initial project structure">
       <created>1753560597259</created>
@@ -169,8 +217,43 @@
       <option name="project" value="LOCAL" />
       <updated>1753652973303</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Create lib directory. Set lib dir as Main Project Library Directory. Add JSON library to project.">
+      <option name="closed" value="true" />
+      <created>1753799474134</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1753799474134</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Update getCurrency method in NBPAPI class">
+      <option name="closed" value="true" />
+      <created>1753799497245</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1753799497245</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Create currency data model in CurrencyData class.">
+      <option name="closed" value="true" />
+      <created>1753799567126</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1753799567126</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Add getCurrencyInfo method in Calculator class to communicate with getCurrency method in NBPAPI class">
+      <option name="closed" value="true" />
+      <created>1753799630222</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1753799630222</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -201,7 +284,15 @@
     <MESSAGE value="Rename files from Resume to Summary. Update directory structure. Move file to proper directory. Update comments." />
     <MESSAGE value="Rename files from Resume to Summary. Update directory structure. Move files to proper directories. Update comments." />
     <MESSAGE value="Add NBPAPI class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add NBPAPI class" />
+    <MESSAGE value="Create lib directory. Set lib dir as Main Project Library Directory. Add JSON library to project." />
+    <MESSAGE value="Update getCurrency method in NBPAPI class" />
+    <MESSAGE value="Create currency data model in CurrencyData class." />
+    <MESSAGE value="Add getCurrencyInfo method in Calculator class to communicate with getCurrency method in NBPAPI class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add getCurrencyInfo method in Calculator class to communicate with getCurrency method in NBPAPI class" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TurboCash$Main.ic" NAME="Main Coverage Results" MODIFIED="1753570030574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
