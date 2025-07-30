@@ -9,6 +9,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.Map;
 
 public class CalculatorPanel extends JPanel {
     private Calculator calculator;
@@ -59,6 +60,7 @@ public class CalculatorPanel extends JPanel {
         gbc.gridy = 2;
         gbc.anchor = GridBagConstraints.LINE_START;
         JComboBox comboTo = new JComboBox(currencyTab);
+        comboTo.setSelectedIndex(1);
         comboTo.setFont(Fonts.LABEL_FONT);
         comboTo.setBackground(Color.WHITE);
         comboTo.setPreferredSize(new Dimension(145, 25));
@@ -119,65 +121,18 @@ public class CalculatorPanel extends JPanel {
 
         button.addActionListener(e -> {
             try {
-                boolean ask = false, bid = false, mixed1 = false, mixed2 = false;
-                CurrencyData currencyFrom=null,currencyTo = null;
-                if(comboFrom.getSelectedItem().toString() != "pln"){
-                    currencyFrom = calculator.getCurrencyInfo(comboFrom.getSelectedItem().toString());
-                    mixed1 = true;
-                }else{
-                    ask = true;
-                }
-
-                if(comboTo.getSelectedItem().toString() != "pln"){
-                    currencyTo = calculator.getCurrencyInfo(comboTo.getSelectedItem().toString());
-                    mixed2 = true;
-                }else{
-                    bid = true;
-                }
-
-                if(comboTo.getSelectedItem().toString() == comboFrom.getSelectedItem().toString()){
-                    ask = true;
-                    bid = true;
-                }
-
-                if (bid == true && ask == true) {
-                    labelError.setText("! ! ! wrong currency selected ! ! !");
-                    throw new Exception("wrong currency selected");
-                }
-
-                if (tfAmount.getText().equals("") || !tfAmount.getText().matches("\\d+") || Double.parseDouble(tfAmount.getText())<=0) {
-                    labelError.setText("! ! ! amount not entered ! ! !");
-                    throw new Exception("amount missing");
-                }
-
-                double amount = Double.parseDouble(tfAmount.getText());
-                double exchange = 0;
-                double course = 0;
-
-                if(mixed1 && mixed2){
-                    course = currencyFrom.getBid()/currencyTo.getAsk();
-                    exchange = amount * course;
-                }
-
-                if(ask && currencyTo!=null){
-                    course = currencyTo.getAsk();
-                    exchange = amount/currencyTo.getAsk();
-                }
-
-                if(bid && currencyFrom!=null){
-                    course = currencyFrom.getBid();
-                    exchange = amount*currencyFrom.getBid();
-                }
-
-                labelExchange.setText("Exchanged: "+String.format("%.2f", exchange));
-                labelCourse.setText("Course: "+String.format("%.2f", course));
-
-            } catch (IOException | URISyntaxException | InterruptedException ex) {
-                ex.printStackTrace();
-                JOptionPane.showMessageDialog(this, "Error while fetching currency data.", "Error", JOptionPane.ERROR_MESSAGE);
-            } catch (Exception ex) {
+                Map data = calculator.calculate(comboFrom.getSelectedItem().toString(), comboTo.getSelectedItem().toString(), tfAmount.getText(), labelError);
+                labelExchange.setText("Exchanged: "+String.format("%.2f", data.get("exchange")));
+                labelCourse.setText("Course: "+String.format("%.2f", data.get("course")));
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            } catch (URISyntaxException ex) {
+                throw new RuntimeException(ex);
+            } catch (InterruptedException ex) {
                 throw new RuntimeException(ex);
             }
+
+
         });
     }
 }
