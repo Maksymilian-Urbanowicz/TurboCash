@@ -8,6 +8,7 @@ import java.net.URISyntaxException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.time.LocalDate;
 
 public class NBPAPI {
     private HttpClient client;
@@ -25,11 +26,12 @@ public class NBPAPI {
         return new JSONObject(response.body());
     }
 
-//    public HttpResponse<String> getTable(String tableKind) throws IOException, InterruptedException {
-//        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-//        return response;
-//    }
-
-
-
+    public JSONObject getTableActual(char kind) throws IOException, InterruptedException, URISyntaxException {
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(new URI("https://api.nbp.pl/api/exchangerates/tables/"+kind+"/today/?format=json"))
+                .GET()
+                .build();
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        return new JSONObject(response.body());
+    }
 }
