@@ -1,0 +1,295 @@
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import Components.MainFrame;\r\n\r\npublic class Main {\r\n    public static void main(String[] args) {\r\n        MainFrame window = new MainFrame();\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+--- a/src/Main.java	(revision bd30d07d8fd38cacbcc248614b7775b783c014c9)
++++ b/src/Main.java	(date 1753797637107)
+@@ -1,7 +1,10 @@
+ import Components.MainFrame;
+ 
++import java.io.IOException;
++import java.net.URISyntaxException;
++
+ public class Main {
+-    public static void main(String[] args) {
++    public static void main(String[] args) throws IOException, URISyntaxException, InterruptedException {
+         MainFrame window = new MainFrame();
+     }
+ }
+\ No newline at end of file
+Index: src/Components/MainFrame.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Components;\r\n\r\nimport Components.TemplatePanel;\r\n\r\nimport javax.swing.*;\r\nimport java.awt.*;\r\n\r\npublic class MainFrame extends JFrame {\r\n    public MainFrame(){\r\n        setTitle(\"TurboCash – your currency courses\");\r\n        setSize(1200, 800);\r\n        setResizable(false);\r\n        setLocationRelativeTo(null);\r\n        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);\r\n        setLayout(new BorderLayout());\r\n\r\n        add(new TemplatePanel(), BorderLayout.CENTER);\r\n        setVisible(true);\r\n\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Components/MainFrame.java b/src/Components/MainFrame.java
+--- a/src/Components/MainFrame.java	(revision bd30d07d8fd38cacbcc248614b7775b783c014c9)
++++ b/src/Components/MainFrame.java	(date 1753797637095)
+@@ -4,9 +4,11 @@
+ 
+ import javax.swing.*;
+ import java.awt.*;
++import java.io.IOException;
++import java.net.URISyntaxException;
+ 
+ public class MainFrame extends JFrame {
+-    public MainFrame(){
++    public MainFrame() throws IOException, URISyntaxException, InterruptedException {
+         setTitle("TurboCash – your currency courses");
+         setSize(1200, 800);
+         setResizable(false);
+Index: src/Components/TemplatePanel.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Components;\r\n\r\nimport Components.MainMenuPanel;\r\n\r\nimport javax.swing.*;\r\nimport java.awt.*;\r\n\r\npublic class TemplatePanel extends JPanel {\r\n    private CardLayout cardLayout = new CardLayout();\r\n    private JPanel cardsPanel = new JPanel(cardLayout);\r\n    public TemplatePanel(){\r\n        setLayout(new BorderLayout());\r\n\r\n        add(new MainMenuPanel(cardsPanel, cardLayout), BorderLayout.NORTH);\r\n        add(cardsPanel, BorderLayout.CENTER);\r\n        add(new FooterPanel(), BorderLayout.SOUTH);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Components/TemplatePanel.java b/src/Components/TemplatePanel.java
+--- a/src/Components/TemplatePanel.java	(revision bd30d07d8fd38cacbcc248614b7775b783c014c9)
++++ b/src/Components/TemplatePanel.java	(date 1753797637098)
+@@ -4,11 +4,13 @@
+ 
+ import javax.swing.*;
+ import java.awt.*;
++import java.io.IOException;
++import java.net.URISyntaxException;
+ 
+ public class TemplatePanel extends JPanel {
+     private CardLayout cardLayout = new CardLayout();
+     private JPanel cardsPanel = new JPanel(cardLayout);
+-    public TemplatePanel(){
++    public TemplatePanel() throws IOException, URISyntaxException, InterruptedException {
+         setLayout(new BorderLayout());
+ 
+         add(new MainMenuPanel(cardsPanel, cardLayout), BorderLayout.NORTH);
+Index: src/Components/MainMenuPanel.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Components;\r\n\r\nimport Panels.CalculatorPanel;\r\nimport Panels.ChartPanl;\r\nimport Panels.SummaryPanel;\r\nimport Panels.TablePanel;\r\n\r\nimport javax.swing.*;\r\nimport java.awt.*;\r\n\r\npublic class MainMenuPanel extends JPanel {\r\n    private GridBagConstraints gbc = new GridBagConstraints();\r\n    private int x = 0;\r\n    private int y = 0;\r\n    private JPanel cardsPanel;      // panel with CardLayout to switch\r\n    private CardLayout cardLayout;  // layout manage cards\r\n\r\n    /**\r\n     * Constructs the main menu panel with navigation buttons.\r\n     * @param cardsPanel - the container JPanel using CardLayout to hold multiple views\r\n     * @param cardLayout - the CardLayout manager used to switch between views in cardsPanel\r\n     */\r\n    public MainMenuPanel(JPanel cardsPanel, CardLayout cardLayout) {\r\n        this.cardsPanel = cardsPanel;\r\n        this.cardLayout = cardLayout;\r\n        setLayout(new GridBagLayout());\r\n        gbc.weightx = 0.5;\r\n        gbc.fill = GridBagConstraints.HORIZONTAL;\r\n\r\n        add(button(\"Calculator\", \"calculator\", new CalculatorPanel()), gbc);\r\n        add(button(\"Chart\", \"chart\", new ChartPanl()), gbc);\r\n        add(button(\"Table\", \"tabel\", new TablePanel()), gbc);\r\n        add(button(\"resume\", \"resume\", new SummaryPanel()), gbc);\r\n    }\r\n\r\n    /**\r\n     * Adds a new JPanel and corresponding JButton.\r\n     * @param name - unique panel name in CardLayout\r\n     * @param displayName - JButton display text\r\n     * @param panel - JPanel to display\r\n     * @return the created JButton\r\n     */\r\n    public JButton button(String name, String displayName, JPanel panel) {\r\n\r\n        cardsPanel.add(panel, name);\r\n\r\n        JButton btn = new JButton(displayName);\r\n        btn.addActionListener(e -> cardLayout.show(cardsPanel, name));\r\n\r\n        gbc.insets = new Insets(10, 5, 10, 5);\r\n        gbc.gridx = x++;\r\n        gbc.gridy = y;\r\n\r\n        return btn;\r\n\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Components/MainMenuPanel.java b/src/Components/MainMenuPanel.java
+--- a/src/Components/MainMenuPanel.java	(revision bd30d07d8fd38cacbcc248614b7775b783c014c9)
++++ b/src/Components/MainMenuPanel.java	(date 1753797637090)
+@@ -7,6 +7,8 @@
+ 
+ import javax.swing.*;
+ import java.awt.*;
++import java.io.IOException;
++import java.net.URISyntaxException;
+ 
+ public class MainMenuPanel extends JPanel {
+     private GridBagConstraints gbc = new GridBagConstraints();
+@@ -20,7 +22,7 @@
+      * @param cardsPanel - the container JPanel using CardLayout to hold multiple views
+      * @param cardLayout - the CardLayout manager used to switch between views in cardsPanel
+      */
+-    public MainMenuPanel(JPanel cardsPanel, CardLayout cardLayout) {
++    public MainMenuPanel(JPanel cardsPanel, CardLayout cardLayout) throws IOException, URISyntaxException, InterruptedException {
+         this.cardsPanel = cardsPanel;
+         this.cardLayout = cardLayout;
+         setLayout(new GridBagLayout());
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"23a59a91-115c-488d-8ac6-db7fa6eb3a36\" name=\"Changes\" comment=\"Add NBPAPI class\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/Activity/API/NBPAPI.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Activity/API/NBPAPI.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"30QT3tshPBrrBJXl0iu5PnUM7er\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\r\n      <module name=\"TurboCash\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.Main\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"23a59a91-115c-488d-8ac6-db7fa6eb3a36\" name=\"Changes\" comment=\"\" />\r\n      <created>1753558603996</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1753558603996</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Create initial project structure\">\r\n      <created>1753560597259</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1753560597259</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Add configuration files\">\r\n      <created>1753560636134</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1753560636134</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Add Colors class. Set Background color\">\r\n      <created>1753561139073</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1753561139073</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Add FooterPanel\">\r\n      <created>1753570278980</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1753570278980</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Add MainMenuPanel\">\r\n      <created>1753570299554</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1753570299554</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Add TemplatePanel\">\r\n      <created>1753570326451</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1753570326451</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Add CalculatorPanel\">\r\n      <created>1753570353162</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1753570353162</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Add ChartPanl\">\r\n      <created>1753570381547</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1753570381547</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Add ResumePanel\">\r\n      <created>1753570397199</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1753570397199</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Add TablePanel\">\r\n      <created>1753570405597</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1753570405597</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"Update MainFrame\">\r\n      <created>1753570422518</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1753570422518</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"UpdateFile\">\r\n      <created>1753570439072</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1753570439072</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"Add create navigation button method\">\r\n      <created>1753570504578</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1753570504578</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"Rename files from Resume to Summary. Update directory structure. Move files to proper directories. Update comments.\">\r\n      <created>1753652951873</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1753652951873</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"Add NBPAPI class\">\r\n      <created>1753652973302</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1753652973303</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"16\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"Create initial project structure\" />\r\n    <MESSAGE value=\"Add configuration files\" />\r\n    <MESSAGE value=\"Add Colors class. Set Background color\" />\r\n    <MESSAGE value=\"Add FooterPanel\" />\r\n    <MESSAGE value=\"Add MainMenuPanel\" />\r\n    <MESSAGE value=\"Add TemplatePanel\" />\r\n    <MESSAGE value=\"Add CalculatorPanel\" />\r\n    <MESSAGE value=\"Add ChartPanl\" />\r\n    <MESSAGE value=\"Add ResumePanel\" />\r\n    <MESSAGE value=\"Add TablePanel\" />\r\n    <MESSAGE value=\"Update MainFrame\" />\r\n    <MESSAGE value=\"UpdateFile\" />\r\n    <MESSAGE value=\"Add create navigation button method\" />\r\n    <MESSAGE value=\"Rename files from Resume to Summary. Update directory structure. Move file to proper directory. Update comments.\" />\r\n    <MESSAGE value=\"Rename files from Resume to Summary. Update directory structure. Move files to proper directories. Update comments.\" />\r\n    <MESSAGE value=\"Add NBPAPI class\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Add NBPAPI class\" />\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/TurboCash$Main.ic\" NAME=\"Main Coverage Results\" MODIFIED=\"1753570030574\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision bd30d07d8fd38cacbcc248614b7775b783c014c9)
++++ b/.idea/workspace.xml	(date 1753799656754)
+@@ -4,9 +4,14 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="23a59a91-115c-488d-8ac6-db7fa6eb3a36" name="Changes" comment="Add NBPAPI class">
++    <list default="true" id="23a59a91-115c-488d-8ac6-db7fa6eb3a36" name="Changes" comment="Add getCurrencyInfo method in Calculator class to communicate with getCurrency method in NBPAPI class">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Activity/API/NBPAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Activity/API/NBPAPI.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/TurboCash.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCash.iml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Activity/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Activity/Calculator.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Components/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainFrame.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Components/MainMenuPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainMenuPanel.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Components/TemplatePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TemplatePanel.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -23,9 +28,24 @@
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
++  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
++  "lastFilter": {
++    "state": "OPEN",
++    "assignee": "Maksymilian-Urbanowicz"
++  }
++}]]></component>
++  <component name="GithubPullRequestsUISettings"><![CDATA[{
++  "selectedUrlAndAccountId": {
++    "url": "https://github.com/Maksymilian-Urbanowicz/TurboCash",
++    "accountId": "850b01c0-667a-428b-aeeb-e7ea59eb1c4f"
++  }
++}]]></component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
++  <component name="ProjectColorInfo"><![CDATA[{
++  "associatedIndex": 4
++}]]></component>
+   <component name="ProjectId" id="30QT3tshPBrrBJXl0iu5PnUM7er" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+     <ConfirmationsSetting value="2" id="Add" />
+@@ -34,13 +54,32 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+-  }
+-}</component>
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "ASKED_ADD_EXTERNAL_FILES": "true",
++    "Application.Main.executor": "Run",
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "RunOnceActivity.git.unshallow": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "git-widget-placeholder": "master",
++    "ignore.virus.scanning.warn.message": "true",
++    "kotlin-language-version-configured": "true",
++    "last_opened_file_path": "D:/IdeProject/TurboCash/lib",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "settings.editor.selected.configurable": "preferences.editor",
++    "vue.rearranger.settings.migration": "true"
++  }
++}]]></component>
++  <component name="RecentsManager">
++    <key name="CopyFile.RECENT_KEYS">
++      <recent name="D:\IdeProject\TurboCash\lib" />
++    </key>
++  </component>
+   <component name="RunManager">
+     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="Main" />
+@@ -55,6 +94,14 @@
+       </list>
+     </recent_temporary>
+   </component>
++  <component name="SharedIndexes">
++    <attachedChunks>
++      <set>
++        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
++        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
++      </set>
++    </attachedChunks>
++  </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -63,6 +110,7 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1753558603996</updated>
++      <workItem from="1753790001669" duration="6600000" />
+     </task>
+     <task id="LOCAL-00001" summary="Create initial project structure">
+       <created>1753560597259</created>
+@@ -169,9 +217,44 @@
+       <option name="project" value="LOCAL" />
+       <updated>1753652973303</updated>
+     </task>
+-    <option name="localTasksCounter" value="16" />
++    <task id="LOCAL-00016" summary="Create lib directory. Set lib dir as Main Project Library Directory. Add JSON library to project.">
++      <option name="closed" value="true" />
++      <created>1753799474134</created>
++      <option name="number" value="00016" />
++      <option name="presentableId" value="LOCAL-00016" />
++      <option name="project" value="LOCAL" />
++      <updated>1753799474134</updated>
++    </task>
++    <task id="LOCAL-00017" summary="Update getCurrency method in NBPAPI class">
++      <option name="closed" value="true" />
++      <created>1753799497245</created>
++      <option name="number" value="00017" />
++      <option name="presentableId" value="LOCAL-00017" />
++      <option name="project" value="LOCAL" />
++      <updated>1753799497245</updated>
++    </task>
++    <task id="LOCAL-00018" summary="Create currency data model in CurrencyData class.">
++      <option name="closed" value="true" />
++      <created>1753799567126</created>
++      <option name="number" value="00018" />
++      <option name="presentableId" value="LOCAL-00018" />
++      <option name="project" value="LOCAL" />
++      <updated>1753799567126</updated>
++    </task>
++    <task id="LOCAL-00019" summary="Add getCurrencyInfo method in Calculator class to communicate with getCurrency method in NBPAPI class">
++      <option name="closed" value="true" />
++      <created>1753799630222</created>
++      <option name="number" value="00019" />
++      <option name="presentableId" value="LOCAL-00019" />
++      <option name="project" value="LOCAL" />
++      <updated>1753799630222</updated>
++    </task>
++    <option name="localTasksCounter" value="20" />
+     <servers />
+   </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
+   <component name="Vcs.Log.Tabs.Properties">
+     <option name="TAB_STATES">
+       <map>
+@@ -201,7 +284,15 @@
+     <MESSAGE value="Rename files from Resume to Summary. Update directory structure. Move file to proper directory. Update comments." />
+     <MESSAGE value="Rename files from Resume to Summary. Update directory structure. Move files to proper directories. Update comments." />
+     <MESSAGE value="Add NBPAPI class" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Add NBPAPI class" />
++    <MESSAGE value="Create lib directory. Set lib dir as Main Project Library Directory. Add JSON library to project." />
++    <MESSAGE value="Update getCurrency method in NBPAPI class" />
++    <MESSAGE value="Create currency data model in CurrencyData class." />
++    <MESSAGE value="Add getCurrencyInfo method in Calculator class to communicate with getCurrency method in NBPAPI class" />
++    <option name="LAST_COMMIT_MESSAGE" value="Add getCurrencyInfo method in Calculator class to communicate with getCurrency method in NBPAPI class" />
++  </component>
++  <component name="XSLT-Support.FileAssociations.UIState">
++    <expand />
++    <select />
+   </component>
+   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+     <SUITE FILE_PATH="coverage/TurboCash$Main.ic" NAME="Main Coverage Results" MODIFIED="1753570030574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+Index: TurboCash.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\r\n    <exclude-output />\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <sourceFolder url=\"file://$MODULE_DIR$/src\" isTestSource=\"false\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/TurboCash.iml b/TurboCash.iml
+--- a/TurboCash.iml	(revision bd30d07d8fd38cacbcc248614b7775b783c014c9)
++++ b/TurboCash.iml	(date 1753798979936)
+@@ -7,5 +7,6 @@
+     </content>
+     <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="library" name="lib" level="project" />
+   </component>
+ </module>
+\ No newline at end of file
