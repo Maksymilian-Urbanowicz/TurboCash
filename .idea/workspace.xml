@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23a59a91-115c-488d-8ac6-db7fa6eb3a36" name="Changes" comment=" Extract the calculation mechanism from CalculationPanel class to a dedicate calculate method in Calculation class to improve separation of concerns and enhance code reusability and testability.">
+    <list default="true" id="23a59a91-115c-488d-8ac6-db7fa6eb3a36" name="Changes" comment="Add getTableActual method in NBPAPI class to get actual curses table.">
       <change beforePath="$PROJECT_DIR$/src/Activity/API/NBPAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Activity/API/NBPAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Panels/CalculatorPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/CalculatorPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +104,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1753558603996</updated>
-      <workItem from="1753790001669" duration="21057000" />
+      <workItem from="1753790001669" duration="22560000" />
     </task>
     <task id="LOCAL-00001" summary="Create initial project structure">
       <created>1753560597259</created>
@@ -292,7 +291,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753912036447</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Add getTableActual method in NBPAPI class to get actual curses table.">
+      <option name="closed" value="true" />
+      <created>1753913588008</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1753913588008</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +318,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add configuration files" />
     <MESSAGE value="Add Colors class. Set Background color" />
     <MESSAGE value="Add FooterPanel" />
     <MESSAGE value="Add MainMenuPanel" />
@@ -336,7 +342,8 @@
     <MESSAGE value="Update colors in Colors class" />
     <MESSAGE value="Update front-end CalculatorPanel class. Add calculate mechanism called by pressed button." />
     <MESSAGE value=" Extract the calculation mechanism from CalculationPanel class to a dedicate calculate method in Calculation class to improve separation of concerns and enhance code reusability and testability." />
-    <option name="LAST_COMMIT_MESSAGE" value=" Extract the calculation mechanism from CalculationPanel class to a dedicate calculate method in Calculation class to improve separation of concerns and enhance code reusability and testability." />
+    <MESSAGE value="Add getTableActual method in NBPAPI class to get actual curses table." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add getTableActual method in NBPAPI class to get actual curses table." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

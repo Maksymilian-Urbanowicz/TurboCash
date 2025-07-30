@@ -34,4 +34,23 @@ public class NBPAPI {
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
         return new JSONObject(response.body());
     }
+
+
+    public JSONObject getTableSeries(char kind, int number) throws IOException, InterruptedException, URISyntaxException {
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(new URI("https://api.nbp.pl/api/exchangerates/tables/"+kind+"/last/"+number+"/?format=json"))
+                .GET()
+                .build();
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        return new JSONObject(response.body());
+    }
+
+    public JSONObject getTableWithDate(char kind, LocalDate dateFrom, LocalDate dateTo) throws IOException, InterruptedException, URISyntaxException {
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(new URI("https://api.nbp.pl/api/exchangerates/tables/"+kind+"/"+dateFrom+"/"+dateTo+"/?format=json"))
+                .GET()
+                .build();
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        return new JSONObject(response.body());
+    }
 }
