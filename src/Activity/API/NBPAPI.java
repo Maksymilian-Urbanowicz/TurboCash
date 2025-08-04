@@ -1,5 +1,6 @@
 package Activity.API;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -26,31 +27,31 @@ public class NBPAPI {
         return new JSONObject(response.body());
     }
 
-    public JSONObject getTableActual(char kind) throws IOException, InterruptedException, URISyntaxException {
+    public JSONArray getTableActual(char kind) throws IOException, InterruptedException, URISyntaxException {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(new URI("https://api.nbp.pl/api/exchangerates/tables/"+kind+"/today/?format=json"))
                 .GET()
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        return new JSONObject(response.body());
+        return new JSONArray(response.body());
     }
 
 
-    public JSONObject getTableSeries(char kind, int number) throws IOException, InterruptedException, URISyntaxException {
+    public JSONArray getTableSeries(char kind, int number) throws IOException, InterruptedException, URISyntaxException {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(new URI("https://api.nbp.pl/api/exchangerates/tables/"+kind+"/last/"+number+"/?format=json"))
                 .GET()
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        return new JSONObject(response.body());
+        return new JSONArray(response.body());
     }
 
-    public JSONObject getTableWithDate(char kind, LocalDate dateFrom, LocalDate dateTo) throws IOException, InterruptedException, URISyntaxException {
+    public JSONArray getTableWithDate(char kind, LocalDate dateFrom, LocalDate dateTo) throws IOException, InterruptedException, URISyntaxException {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(new URI("https://api.nbp.pl/api/exchangerates/tables/"+kind+"/"+dateFrom+"/"+dateTo+"/?format=json"))
                 .GET()
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        return new JSONObject(response.body());
+        return new JSONArray(response.body());
     }
 }
