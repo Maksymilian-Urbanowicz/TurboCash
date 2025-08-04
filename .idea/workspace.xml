@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23a59a91-115c-488d-8ac6-db7fa6eb3a36" name="Changes" comment="Add getTableActual method in NBPAPI class to get actual curses table.">
+    <list default="true" id="23a59a91-115c-488d-8ac6-db7fa6eb3a36" name="Changes" comment="Add translate method in CurrencyNameTranslatorAPI class to get currency name in english">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Activity/API/NBPAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Activity/API/NBPAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Activity/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Activity/Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/CalculatorPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/CalculatorPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/TablePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/TablePanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,27 +52,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/IdeProject/TurboCash/lib&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/IdeProject/TurboCash",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\IdeProject\TurboCash\lib" />
@@ -104,7 +108,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1753558603996</updated>
-      <workItem from="1753790001669" duration="22560000" />
+      <workItem from="1753790001669" duration="22756000" />
+      <workItem from="1754311132688" duration="7857000" />
     </task>
     <task id="LOCAL-00001" summary="Create initial project structure">
       <created>1753560597259</created>
@@ -299,7 +304,31 @@
       <option name="project" value="LOCAL" />
       <updated>1753913588008</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Add getTableWithDate method in NBPAPI class to get curses tables between dates.">
+      <option name="closed" value="true" />
+      <created>1753913934087</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1753913934087</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Add CurrencyNameTranslatorAPI class">
+      <option name="closed" value="true" />
+      <created>1754323341572</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1754323341572</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Add translate method in CurrencyNameTranslatorAPI class to get currency name in english">
+      <option name="closed" value="true" />
+      <created>1754323397774</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1754323397774</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,9 +347,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add Colors class. Set Background color" />
-    <MESSAGE value="Add FooterPanel" />
-    <MESSAGE value="Add MainMenuPanel" />
     <MESSAGE value="Add TemplatePanel" />
     <MESSAGE value="Add CalculatorPanel" />
     <MESSAGE value="Add ChartPanl" />
@@ -343,7 +369,10 @@
     <MESSAGE value="Update front-end CalculatorPanel class. Add calculate mechanism called by pressed button." />
     <MESSAGE value=" Extract the calculation mechanism from CalculationPanel class to a dedicate calculate method in Calculation class to improve separation of concerns and enhance code reusability and testability." />
     <MESSAGE value="Add getTableActual method in NBPAPI class to get actual curses table." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add getTableActual method in NBPAPI class to get actual curses table." />
+    <MESSAGE value="Add getTableWithDate method in NBPAPI class to get curses tables between dates." />
+    <MESSAGE value="Add CurrencyNameTranslatorAPI class" />
+    <MESSAGE value="Add translate method in CurrencyNameTranslatorAPI class to get currency name in english" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add translate method in CurrencyNameTranslatorAPI class to get currency name in english" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

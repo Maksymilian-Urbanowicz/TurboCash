@@ -15,7 +15,7 @@ public class CalculatorPanel extends JPanel {
     private Calculator calculator;
 
     public CalculatorPanel() throws IOException, URISyntaxException, InterruptedException {
-        setBackground(Colors.BACKGROUND); // jaśniejszy szary
+        setBackground(Colors.BACKGROUND);
         setLayout(new GridBagLayout());
 
         calculator = new Calculator();
