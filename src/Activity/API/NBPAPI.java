@@ -27,6 +27,15 @@ public class NBPAPI {
         return new JSONObject(response.body());
     }
 
+    public JSONArray getCurrencyWithDate(String code, String dateFrom, String dateTo) throws IOException, InterruptedException, URISyntaxException {
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(new URI("https://api.nbp.pl/api/exchangerates/rates/a/"+code+"/"+dateFrom+"/"+dateTo+"/?format=json"))
+                .GET()
+                .build();
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        return new JSONArray(response.body());
+    }
+
     public JSONArray getTableActual(char kind) throws IOException, InterruptedException, URISyntaxException {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(new URI("https://api.nbp.pl/api/exchangerates/tables/"+kind+"/today/?format=json"))
@@ -46,7 +55,7 @@ public class NBPAPI {
         return new JSONArray(response.body());
     }
 
-    public JSONArray getTableWithDate(char kind, LocalDate dateFrom, LocalDate dateTo) throws IOException, InterruptedException, URISyntaxException {
+    public JSONArray getTableWithDate(char kind, String dateFrom, String dateTo) throws IOException, InterruptedException, URISyntaxException {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(new URI("https://api.nbp.pl/api/exchangerates/tables/"+kind+"/"+dateFrom+"/"+dateTo+"/?format=json"))
                 .GET()
