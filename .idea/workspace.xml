@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23a59a91-115c-488d-8ac6-db7fa6eb3a36" name="Changes" comment="Add translate method in CurrencyNameTranslatorAPI class to get currency name in english">
+    <list default="true" id="23a59a91-115c-488d-8ac6-db7fa6eb3a36" name="Changes" comment="Update CalculatorPanel class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Activity/API/NBPAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Activity/API/NBPAPI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Activity/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Activity/Table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Panels/CalculatorPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/CalculatorPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Colors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Colors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Fonts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Fonts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Panels/TablePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/TablePanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +109,7 @@
       <option name="presentableId" value="Default" />
       <updated>1753558603996</updated>
       <workItem from="1753790001669" duration="22756000" />
-      <workItem from="1754311132688" duration="7857000" />
+      <workItem from="1754311132688" duration="11017000" />
     </task>
     <task id="LOCAL-00001" summary="Create initial project structure">
       <created>1753560597259</created>
@@ -328,7 +328,39 @@
       <option name="project" value="LOCAL" />
       <updated>1754323397774</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Add getDataTable method in Table class to transfer data between API and TablePanel class.">
+      <option name="closed" value="true" />
+      <created>1754324241776</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1754324241776</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Update TablePanel class. Add Table with data">
+      <option name="closed" value="true" />
+      <created>1754324267541</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1754324267541</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Change datatype of getTableWithDate, getTableSeries, getTableActual methods in NBPAPI class">
+      <option name="closed" value="true" />
+      <created>1754324351827</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1754324351827</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Update CalculatorPanel class">
+      <option name="closed" value="true" />
+      <created>1754324372333</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1754324372333</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,10 +379,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add TemplatePanel" />
-    <MESSAGE value="Add CalculatorPanel" />
-    <MESSAGE value="Add ChartPanl" />
-    <MESSAGE value="Add ResumePanel" />
     <MESSAGE value="Add TablePanel" />
     <MESSAGE value="Update MainFrame" />
     <MESSAGE value="UpdateFile" />
@@ -372,7 +400,11 @@
     <MESSAGE value="Add getTableWithDate method in NBPAPI class to get curses tables between dates." />
     <MESSAGE value="Add CurrencyNameTranslatorAPI class" />
     <MESSAGE value="Add translate method in CurrencyNameTranslatorAPI class to get currency name in english" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add translate method in CurrencyNameTranslatorAPI class to get currency name in english" />
+    <MESSAGE value="Add getDataTable method in Table class to transfer data between API and TablePanel class." />
+    <MESSAGE value="Update TablePanel class. Add Table with data" />
+    <MESSAGE value="Change datatype of getTableWithDate, getTableSeries, getTableActual methods in NBPAPI class" />
+    <MESSAGE value="Update CalculatorPanel class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update CalculatorPanel class" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
