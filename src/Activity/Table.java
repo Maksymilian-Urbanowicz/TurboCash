@@ -28,10 +28,9 @@ public class Table {
             cols[i] = new String[]{
                     rate.getString("code"),
                     translatorAPI.translate(rate.getString("code")),
-                    String.valueOf(rate.getDouble("mid"))
+                    String.format("%.2f",rate.getDouble("mid"))
             };
         }
-
         return cols;
     }
 }
