@@ -15,4 +15,12 @@ public class CurrencyNameTranslatorAPI {
     public CurrencyNameTranslatorAPI() {
         this.client = HttpClient.newHttpClient();
     }
+
+    public String translate(String code) throws IOException, InterruptedException, URISyntaxException {
+        HttpRequest request = HttpRequest.newBuilder().uri(new URI("https://openexchangerates.org/api/currencies.json")).GET().build();
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        JSONObject json = new JSONObject(response.body());
+        return json.getString(code);
+    }
 }
