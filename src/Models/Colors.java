@@ -12,4 +12,6 @@ public class Colors {
     public static final Color TABLE_ROW_ODD = new Color(255, 255, 255);
     public static final Color TABLE_ROW_EVEN = new Color(230, 230, 255);
     public static final Color TABLE_HEADER = new Color(255, 255, 255);
+    public static final Color INPUT_CONTROLS_BACKGROUND = new Color(255, 255, 255);
+    public static final Color INPUT_CONTROLS_FONT = new Color(0, 0, 0);
 }
