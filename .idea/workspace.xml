@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23a59a91-115c-488d-8ac6-db7fa6eb3a36" name="Changes" comment="Update CalculatorPanel class">
+    <list default="true" id="23a59a91-115c-488d-8ac6-db7fa6eb3a36" name="Changes" comment="Change getDataTable method in Summary class. Add dateFrom and dateTo arguments to make the method more flexible">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Activity/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Activity/Table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Colors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Colors.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/Fonts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Fonts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MainMenuPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainMenuPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/TemplatePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TemplatePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/CalculatorPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/CalculatorPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Panels/TablePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/TablePanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,29 +57,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/IdeProject/TurboCash",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.editor",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IdeProject/TurboCash&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\IdeProject\TurboCash\lib" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\IdeProject\TurboCash\lib" />
     </key>
   </component>
@@ -109,7 +117,9 @@
       <option name="presentableId" value="Default" />
       <updated>1753558603996</updated>
       <workItem from="1753790001669" duration="22756000" />
-      <workItem from="1754311132688" duration="11017000" />
+      <workItem from="1754311132688" duration="15045000" />
+      <workItem from="1754403223828" duration="12424000" />
+      <workItem from="1754590314251" duration="957000" />
     </task>
     <task id="LOCAL-00001" summary="Create initial project structure">
       <created>1753560597259</created>
@@ -360,7 +370,87 @@
       <option name="project" value="LOCAL" />
       <updated>1754324372333</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Add table colors in Colors class">
+      <option name="closed" value="true" />
+      <created>1754334601720</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1754334601720</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Add table fonts in Fonts class">
+      <option name="closed" value="true" />
+      <created>1754334613438</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1754334613438</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Change course string format in getDataTable method in Table class">
+      <option name="closed" value="true" />
+      <created>1754334679136</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1754334679136</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Change scroller, table, and table header preferences in TablePanel class">
+      <option name="closed" value="true" />
+      <created>1754334824005</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1754334824005</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Add getCurrencyWithDate method in NBPAPI class to get currency curses between dates.">
+      <option name="closed" value="true" />
+      <created>1754336641557</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1754336641557</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Add jcalendar-1.4.jar, jgoodies-common-1.2.0.jar, jgoodies-looks-2.4.1.jar, junit-4.6.jar like JCalendar input control library to project">
+      <option name="closed" value="true" />
+      <created>1754406392870</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1754406392870</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Add INPUT_CONTROLS_BACKGROUND, INPUT_CONTROLS_FONT colors to Colors class">
+      <option name="closed" value="true" />
+      <created>1754406493373</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1754406493373</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Add INPUT_CONTROLS, BUTTON fonts to Fonts class. Update names of variable">
+      <option name="closed" value="true" />
+      <created>1754406549042</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1754406549042</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Add btnPanel with action button to change date range for data in table in SummaryPanel">
+      <option name="closed" value="true" />
+      <created>1754592131335</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1754592131335</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Change getDataTable method in Summary class. Add dateFrom and dateTo arguments to make the method more flexible">
+      <option name="closed" value="true" />
+      <created>1754592256707</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1754592256707</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,7 +461,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="text">
+                    <value>
+                      <list>
+                        <option value="Add" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -379,16 +481,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add TablePanel" />
-    <MESSAGE value="Update MainFrame" />
-    <MESSAGE value="UpdateFile" />
-    <MESSAGE value="Add create navigation button method" />
-    <MESSAGE value="Rename files from Resume to Summary. Update directory structure. Move file to proper directory. Update comments." />
-    <MESSAGE value="Rename files from Resume to Summary. Update directory structure. Move files to proper directories. Update comments." />
-    <MESSAGE value="Add NBPAPI class" />
-    <MESSAGE value="Create lib directory. Set lib dir as Main Project Library Directory. Add JSON library to project." />
-    <MESSAGE value="Update getCurrency method in NBPAPI class" />
-    <MESSAGE value="Create currency data model in CurrencyData class." />
     <MESSAGE value="Update constructor in CalculatorPanel class" />
     <MESSAGE value="Update constructor in CalculatorPanel class" />
     <MESSAGE value="Update throws in project by json-lib" />
@@ -404,7 +496,28 @@
     <MESSAGE value="Update TablePanel class. Add Table with data" />
     <MESSAGE value="Change datatype of getTableWithDate, getTableSeries, getTableActual methods in NBPAPI class" />
     <MESSAGE value="Update CalculatorPanel class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update CalculatorPanel class" />
+    <MESSAGE value="Add table colors in Colors class" />
+    <MESSAGE value="Add table fonts in Fonts class" />
+    <MESSAGE value="Change course string format in getDataTable method in Table class" />
+    <MESSAGE value="Change scroller, table, and table header preferences in TablePanel class" />
+    <MESSAGE value="Add getCurrencyWithDate method in NBPAPI class to get currency curses between dates." />
+    <MESSAGE value="Add jcalendar-1.4.jar, jgoodies-common-1.2.0.jar, jgoodies-looks-2.4.1.jar, junit-4.6.jar like JCalendar input control library to project" />
+    <MESSAGE value="Add INPUT_CONTROLS_BACKGROUND, INPUT_CONTROLS_FONT colors to Colors class" />
+    <MESSAGE value="Add INPUT_CONTROLS, BUTTON fonts to Fonts class. Update names of variable" />
+    <MESSAGE value="Add btnPanel with action button to change date range for data in table in SummaryPanel" />
+    <MESSAGE value="Change getDataTable method in Summary class. Add dateFrom and dateTo arguments to make the method more flexible" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change getDataTable method in Summary class. Add dateFrom and dateTo arguments to make the method more flexible" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/lib/jcalendar-1.4.jar!/com/toedter/calendar/JDateChooser.class</url>
+          <line>42</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

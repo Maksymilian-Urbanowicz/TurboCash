@@ -24,7 +24,7 @@ public class CalculatorPanel extends JPanel {
         gbc.insets = new Insets(10, 10, 10, 10);
 
         JLabel title = new JLabel("Currency Calculator ");
-        title.setFont(Fonts.TITLE_FONT);
+        title.setFont(Fonts.TITLE);
         title.setForeground(Colors.TITLE);
         gbc.gridx = 0;
         gbc.gridy = 0;
@@ -37,15 +37,15 @@ public class CalculatorPanel extends JPanel {
         gbc.gridx = 0;
         gbc.gridy = 1;
         JLabel labelFrom = new JLabel("From ");
-        labelFrom.setFont(Fonts.LABEL_FONT);
+        labelFrom.setFont(Fonts.LABEL);
         add(labelFrom, gbc);
 
         gbc.gridx = 1;
         gbc.anchor = GridBagConstraints.LINE_START;
         gbc.gridy = 1;
         JComboBox comboFrom = new JComboBox(currencyTab);
-        comboFrom.setFont(Fonts.LABEL_FONT);
-        comboFrom.setBackground(Color.WHITE);
+        comboFrom.setFont(Fonts.INPUT_CONTROLS);
+        comboFrom.setBackground(Colors.INPUT_CONTROLS_BACKGROUND);
         comboFrom.setPreferredSize(new Dimension(145, 25));
         add(comboFrom, gbc);
 
@@ -53,7 +53,7 @@ public class CalculatorPanel extends JPanel {
         gbc.gridy = 2;
         gbc.anchor = GridBagConstraints.LINE_END;
         JLabel labelTo = new JLabel("To ");
-        labelTo.setFont(Fonts.LABEL_FONT);
+        labelTo.setFont(Fonts.LABEL);
         add(labelTo, gbc);
 
         gbc.gridx = 1;
@@ -61,8 +61,8 @@ public class CalculatorPanel extends JPanel {
         gbc.anchor = GridBagConstraints.LINE_START;
         JComboBox comboTo = new JComboBox(currencyTab);
         comboTo.setSelectedIndex(1);
-        comboTo.setFont(Fonts.LABEL_FONT);
-        comboTo.setBackground(Color.WHITE);
+        comboTo.setFont(Fonts.INPUT_CONTROLS);
+        comboTo.setBackground(Colors.INPUT_CONTROLS_BACKGROUND);
         comboTo.setPreferredSize(new Dimension(145, 25));
         add(comboTo, gbc);
 
@@ -70,14 +70,14 @@ public class CalculatorPanel extends JPanel {
         gbc.gridy = 3;
         gbc.anchor = GridBagConstraints.LINE_END;
         JLabel labelAmount = new JLabel("Amount ");
-        labelAmount.setFont(Fonts.LABEL_FONT);
+        labelAmount.setFont(Fonts.LABEL);
         add(labelAmount, gbc);
 
         gbc.gridx = 1;
         gbc.gridy = 3;
         gbc.anchor = GridBagConstraints.LINE_START;
         JTextField tfAmount = new JTextField(10);
-        tfAmount.setFont(Fonts.LABEL_FONT);
+        tfAmount.setFont(Fonts.INPUT_CONTROLS);
         tfAmount.setPreferredSize(new Dimension(100, 25));
         add(tfAmount, gbc);
 
@@ -86,7 +86,7 @@ public class CalculatorPanel extends JPanel {
         gbc.gridwidth = 2;
         gbc.anchor = GridBagConstraints.CENTER;
         JButton button = new JButton("Calculate");
-        button.setFont(Fonts.LABEL_FONT);
+        button.setFont(Fonts.BUTTON);
         button.setBackground(Colors.BUTTON_BACKGROUND);
         button.setForeground(Colors.BUTTON_FONT);
         button.setFocusPainted(false);
@@ -98,7 +98,7 @@ public class CalculatorPanel extends JPanel {
         gbc.gridwidth = 2;
         gbc.anchor = GridBagConstraints.LINE_END;
         JLabel labelError = new JLabel(" ");
-        labelError.setFont(Fonts.LABEL_FONT);
+        labelError.setFont(Fonts.LABEL);
         labelError.setForeground(Colors.ERROR);
 
         add(labelError, gbc);
@@ -108,7 +108,7 @@ public class CalculatorPanel extends JPanel {
         gbc.gridwidth = 2;
         gbc.anchor = GridBagConstraints.LINE_START;
         JLabel labelExchange = new JLabel(" ");
-        labelExchange.setFont(Fonts.LABEL_FONT);
+        labelExchange.setFont(Fonts.LABEL);
         add(labelExchange, gbc);
 
         gbc.gridx = 0;
@@ -116,7 +116,7 @@ public class CalculatorPanel extends JPanel {
         gbc.gridwidth = 2;
         gbc.anchor = GridBagConstraints.LINE_START;
         JLabel labelCourse = new JLabel(" ");
-        labelCourse.setFont(Fonts.LABEL_FONT);
+        labelCourse.setFont(Fonts.LABEL);
         add(labelCourse, gbc);
 
         button.addActionListener(e -> {

@@ -9,6 +9,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.text.ParseException;
 
 public class MainMenuPanel extends JPanel {
     private GridBagConstraints gbc = new GridBagConstraints();
@@ -22,7 +23,7 @@ public class MainMenuPanel extends JPanel {
      * @param cardsPanel - the container JPanel using CardLayout to hold multiple views
      * @param cardLayout - the CardLayout manager used to switch between views in cardsPanel
      */
-    public MainMenuPanel(JPanel cardsPanel, CardLayout cardLayout) throws IOException, URISyntaxException, InterruptedException {
+    public MainMenuPanel(JPanel cardsPanel, CardLayout cardLayout) throws IOException, URISyntaxException, InterruptedException, ParseException {
         this.cardsPanel = cardsPanel;
         this.cardLayout = cardLayout;
         setLayout(new GridBagLayout());
