@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23a59a91-115c-488d-8ac6-db7fa6eb3a36" name="Changes" comment="Change getDataTable method in Summary class. Add dateFrom and dateTo arguments to make the method more flexible">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
+    <list default="true" id="23a59a91-115c-488d-8ac6-db7fa6eb3a36" name="Changes" comment="Update security Table and TablePanel classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Activity/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Activity/Table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/MainMenuPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/MainMenuPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/TemplatePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TemplatePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Panels/CalculatorPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/CalculatorPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Panels/TablePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/TablePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Activity/Summary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Activity/Summary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/SummaryPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/SummaryPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +112,7 @@
       <workItem from="1753790001669" duration="22756000" />
       <workItem from="1754311132688" duration="15045000" />
       <workItem from="1754403223828" duration="12424000" />
-      <workItem from="1754590314251" duration="957000" />
+      <workItem from="1754590314251" duration="6463000" />
     </task>
     <task id="LOCAL-00001" summary="Create initial project structure">
       <created>1753560597259</created>
@@ -450,7 +443,23 @@
       <option name="project" value="LOCAL" />
       <updated>1754592256707</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Update throws and extensions for all the project files">
+      <option name="closed" value="true" />
+      <created>1754592381277</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1754592381277</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Update security Table and TablePanel classes">
+      <option name="closed" value="true" />
+      <created>1754595309374</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1754595309374</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -481,8 +490,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Update constructor in CalculatorPanel class" />
-    <MESSAGE value="Update constructor in CalculatorPanel class" />
     <MESSAGE value="Update throws in project by json-lib" />
     <MESSAGE value="Add Fonts class" />
     <MESSAGE value="Update colors in Colors class" />
@@ -506,7 +513,9 @@
     <MESSAGE value="Add INPUT_CONTROLS, BUTTON fonts to Fonts class. Update names of variable" />
     <MESSAGE value="Add btnPanel with action button to change date range for data in table in SummaryPanel" />
     <MESSAGE value="Change getDataTable method in Summary class. Add dateFrom and dateTo arguments to make the method more flexible" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change getDataTable method in Summary class. Add dateFrom and dateTo arguments to make the method more flexible" />
+    <MESSAGE value="Update throws and extensions for all the project files" />
+    <MESSAGE value="Update security Table and TablePanel classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update security Table and TablePanel classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -255,7 +255,47 @@ public class SummaryPanel extends JPanel{ //show the currency time resume
             }
         });
 
+        btn7day.addActionListener(evt -> {
+            try {
+                String[][] noweDane = smr.getDataTableSeries(7);
+                DefaultTableModel newModel = new DefaultTableModel(noweDane, columnNames);
+                table.setModel(newModel);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            } catch (URISyntaxException e) {
+                throw new RuntimeException(e);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
 
+        btn14day.addActionListener(evt -> {
+            try {
+                String[][] noweDane = smr.getDataTableSeries(14);
+                DefaultTableModel newModel = new DefaultTableModel(noweDane, columnNames);
+                table.setModel(newModel);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            } catch (URISyntaxException e) {
+                throw new RuntimeException(e);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+
+        btn1month.addActionListener(evt -> {
+            try {
+                String[][] noweDane = smr.getDataTableSeries(30);
+                DefaultTableModel newModel = new DefaultTableModel(noweDane, columnNames);
+                table.setModel(newModel);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            } catch (URISyntaxException e) {
+                throw new RuntimeException(e);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
     }
 
     private Date[] setDateFromRange(Date startDate) {
