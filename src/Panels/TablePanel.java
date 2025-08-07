@@ -14,7 +14,7 @@ import java.net.URISyntaxException;
 
 public class TablePanel extends JPanel {
     public TablePanel() throws IOException, URISyntaxException, InterruptedException {
-        setBackground(Colors.BACKGROUND); // jaśniejszy szary
+        setBackground(Colors.BACKGROUND);
         setLayout(new GridBagLayout());
 
         Table tbl = new Table();
@@ -24,7 +24,7 @@ public class TablePanel extends JPanel {
 
         //set card title
         JLabel title = new JLabel("Course table");
-        title.setFont(Fonts.TITLE_FONT);
+        title.setFont(Fonts.TITLE);
         title.setForeground(Colors.TITLE);
         gbc.gridx = 0;
         gbc.gridy = 0;
@@ -47,7 +47,7 @@ public class TablePanel extends JPanel {
         table.setDefaultRenderer(Object.class, new DefaultTableCellRenderer() {
             public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
                 Component c = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
-                table.setFont(Fonts.TABLE_CEIL_FONT);
+                table.setFont(Fonts.TABLE_CEIL);
                 if(!isSelected) {
                     if(row % 2 == 0) {
                         c.setBackground(Colors.TABLE_ROW_EVEN);
@@ -63,7 +63,7 @@ public class TablePanel extends JPanel {
 
         //set font and color of header
         JTableHeader header = table.getTableHeader();
-        header.setFont(Fonts.TABLE_HEADER_FONT);
+        header.setFont(Fonts.TABLE_HEADER);
         header.setForeground(Colors.TITLE);
         header.setBackground(Colors.TABLE_HEADER);
 
