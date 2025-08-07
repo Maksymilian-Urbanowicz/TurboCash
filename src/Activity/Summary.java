@@ -3,10 +3,13 @@ package Activity;
 import Activity.API.CurrencyNameTranslatorAPI;
 import Activity.API.NBPAPI;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.Calendar;
+import java.util.Date;
 
 public class Summary {
     private NBPAPI nbp;
@@ -23,6 +26,30 @@ public class Summary {
             throw new IllegalStateException("Expected at least 2 entries for the given date range.");
         }
 
+        return setDataToTable(jsonArray);
+    }
+
+    public String[][] getDataTableSeries(int amount) throws IOException, URISyntaxException, InterruptedException {
+        Date today = new Date();
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(today);
+        for(int i=amount; i>0; i-- ) {
+            calendar.add(Calendar.DATE, -i);
+            int dayOfWeekIndex = calendar.get(Calendar.DAY_OF_WEEK);
+            if(dayOfWeekIndex == Calendar.SATURDAY|| dayOfWeekIndex == Calendar.SUNDAY) {
+                amount--;
+            }
+        }
+
+        JSONArray jsonArray = nbp.getTableSeries('a', amount);
+        if (jsonArray.length() < 2) {
+            throw new IllegalStateException("Expected at least 2 entries for the given date range.");
+        }
+
+        return setDataToTable(jsonArray);
+    }
+
+    private String[][] setDataToTable(JSONArray jsonArray) throws JSONException {
         JSONObject dataFirst = jsonArray.getJSONObject(0);
         JSONObject dataLast = jsonArray.getJSONObject(jsonArray.length() - 1);
         JSONArray ratesFirst = dataFirst.getJSONArray("rates");
@@ -47,9 +74,9 @@ public class Summary {
             double end = rateL.getDouble("mid");
             double diff = ((end - start) / start) * 100;
 
-            cols[i] = new String[]{ code, name, String.format("%+.2f%%", diff)};
+            cols[i] = new String[]{code, name, String.format("%+.2f%%", diff)};
         }
-
         return cols;
     }
 }
+
