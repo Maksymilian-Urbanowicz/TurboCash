@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23a59a91-115c-488d-8ac6-db7fa6eb3a36" name="Changes" comment="Update security Table and TablePanel classes">
+    <list default="true" id="23a59a91-115c-488d-8ac6-db7fa6eb3a36" name="Changes" comment="Add charts library like jfreechart-1.5.4.jar library to lib">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Activity/API/NBPAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Activity/API/NBPAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Activity/Chart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Activity/Chart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Activity/Summary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Activity/Summary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panels/ChartPanl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/ChartPanl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Panels/SummaryPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/SummaryPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,27 +53,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/IdeProject/TurboCash&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/IdeProject/TurboCash/lib",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\IdeProject\TurboCash\lib" />
@@ -112,7 +115,8 @@
       <workItem from="1753790001669" duration="22756000" />
       <workItem from="1754311132688" duration="15045000" />
       <workItem from="1754403223828" duration="12424000" />
-      <workItem from="1754590314251" duration="6463000" />
+      <workItem from="1754590314251" duration="9922000" />
+      <workItem from="1754949675477" duration="6386000" />
     </task>
     <task id="LOCAL-00001" summary="Create initial project structure">
       <created>1753560597259</created>
@@ -459,7 +463,31 @@
       <option name="project" value="LOCAL" />
       <updated>1754595309374</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Update action buttons of btn7day, btn14day, btn1month in TablePanel class.">
+      <option name="closed" value="true" />
+      <created>1754599654247</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1754599654247</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Extract preparing json response to table data to getDataTableSeries method in SummaryPanel class">
+      <option name="closed" value="true" />
+      <created>1754599774387</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1754599774387</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Add charts library like jfreechart-1.5.4.jar library to lib">
+      <option name="closed" value="true" />
+      <created>1754952260530</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1754952260530</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,19 +498,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="text">
-                    <value>
-                      <list>
-                        <option value="Add" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -490,11 +506,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Update throws in project by json-lib" />
-    <MESSAGE value="Add Fonts class" />
-    <MESSAGE value="Update colors in Colors class" />
-    <MESSAGE value="Update front-end CalculatorPanel class. Add calculate mechanism called by pressed button." />
-    <MESSAGE value=" Extract the calculation mechanism from CalculationPanel class to a dedicate calculate method in Calculation class to improve separation of concerns and enhance code reusability and testability." />
     <MESSAGE value="Add getTableActual method in NBPAPI class to get actual curses table." />
     <MESSAGE value="Add getTableWithDate method in NBPAPI class to get curses tables between dates." />
     <MESSAGE value="Add CurrencyNameTranslatorAPI class" />
@@ -515,7 +526,12 @@
     <MESSAGE value="Change getDataTable method in Summary class. Add dateFrom and dateTo arguments to make the method more flexible" />
     <MESSAGE value="Update throws and extensions for all the project files" />
     <MESSAGE value="Update security Table and TablePanel classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update security Table and TablePanel classes" />
+    <MESSAGE value="        Update action buttons of btn7day, btn14day, btn1month in SummaryPanel class." />
+    <MESSAGE value="Extract preparing json response to table data to getDataTableSeries method in Summary class" />
+    <MESSAGE value="        Update action buttons of btn7day, btn14day, btn1month in SummaryPanel class." />
+    <MESSAGE value="Extract preparing json response to table data to getDataTableSeries method in Summary class" />
+    <MESSAGE value="Add charts library like jfreechart-1.5.4.jar library to lib" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add charts library like jfreechart-1.5.4.jar library to lib" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -524,6 +540,11 @@
           <url>jar://$PROJECT_DIR$/lib/jcalendar-1.4.jar!/com/toedter/calendar/JDateChooser.class</url>
           <line>42</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Panels/SummaryPanel.java</url>
+          <line>162</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

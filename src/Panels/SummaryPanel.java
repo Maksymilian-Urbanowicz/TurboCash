@@ -161,6 +161,7 @@ public class SummaryPanel extends JPanel{ //show the currency time resume
         String[][] data = smr.getDataTable(
                 new SimpleDateFormat("yyyy-MM-dd").format(yesterday()),
                 new SimpleDateFormat("yyyy-MM-dd").format(new Date())
+                //TODO fix data problem after 00:00 when a new table is unavailable
         );
 
         String[] columnNames = {"CODE", "NAME", "COURSE"};

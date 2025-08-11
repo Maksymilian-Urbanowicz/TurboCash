@@ -23,7 +23,7 @@ public class Summary {
     public String[][] getDataTable(String dateFrom, String dateTo) throws IOException, URISyntaxException, InterruptedException {
         JSONArray jsonArray = nbp.getTableWithDate('a', dateFrom, dateTo);
         if (jsonArray.length() < 2) {
-            throw new IllegalStateException("Expected at least 2 entries for the given date range.");
+            //throw new IllegalStateException("Expected at least 2 entries for the given date range.");
         }
 
         return setDataToTable(jsonArray);
@@ -33,7 +33,7 @@ public class Summary {
         Date today = new Date();
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(today);
-        for(int i=amount; i>0; i-- ) {
+        for(int i=amount; i>=0; i-- ) {
             calendar.add(Calendar.DATE, -i);
             int dayOfWeekIndex = calendar.get(Calendar.DAY_OF_WEEK);
             if(dayOfWeekIndex == Calendar.SATURDAY|| dayOfWeekIndex == Calendar.SUNDAY) {
