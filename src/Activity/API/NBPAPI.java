@@ -36,9 +36,18 @@ public class NBPAPI {
         return new JSONArray(response.body());
     }
 
+    public JSONObject getCurrencySeries(String code, int number) throws IOException, InterruptedException, URISyntaxException {
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(new URI("https://api.nbp.pl/api/exchangerates/rates/a/"+code+"/last/"+number+"/?format=json"))
+                .GET()
+                .build();
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        return new JSONObject(response.body());
+    }
+
     public JSONArray getTableActual(char kind) throws IOException, InterruptedException, URISyntaxException {
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(new URI("https://api.nbp.pl/api/exchangerates/tables/"+kind+"/today/?format=json"))
+                .uri(new URI("https://api.nbp.pl/api/exchangerates/tables/"+kind+"/last/?format=json"))
                 .GET()
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
