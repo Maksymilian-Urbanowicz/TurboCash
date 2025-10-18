@@ -24,7 +24,14 @@ public class NBPAPI {
                 .GET()
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        return new JSONObject(response.body());
+
+        if(response.body()!=null){
+            //JSONObject jsonObject = new JSONObject(response.body());
+            //System.out.println(jsonObject.toString());
+            return new JSONObject(response.body());
+        }else{
+            return new JSONObject();
+        }
     }
 
     public JSONArray getCurrencyWithDate(String code, String dateFrom, String dateTo) throws IOException, InterruptedException, URISyntaxException {
@@ -33,7 +40,14 @@ public class NBPAPI {
                 .GET()
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        return new JSONArray(response.body());
+
+        if(response.body()!=null){
+            //JSONArray jsonArray = new JSONArray(response.body());
+            //System.out.println(jsonArray.toString());
+            return new JSONArray(response.body());
+        }else{
+            return new JSONArray();
+        }
     }
 
     public JSONObject getCurrencySeries(String code, int number) throws IOException, InterruptedException, URISyntaxException {
@@ -42,7 +56,14 @@ public class NBPAPI {
                 .GET()
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        return new JSONObject(response.body());
+
+        if(response.body()!=null){
+            //JSONObject jsonObject = new JSONObject(response.body());
+            //System.out.println(jsonObject.toString());
+            return new JSONObject(response.body());
+        }else{
+            return new JSONObject();
+        }
     }
 
     public JSONArray getTableActual(char kind) throws IOException, InterruptedException, URISyntaxException {
@@ -51,7 +72,14 @@ public class NBPAPI {
                 .GET()
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        return new JSONArray(response.body());
+
+        if(response.body()!=null){
+            //JSONArray jsonArray = new JSONArray(response.body());
+            //System.out.println(jsonArray.toString());
+            return new JSONArray(response.body());
+        }else{
+            return new JSONArray();
+        }
     }
 
 
@@ -61,7 +89,14 @@ public class NBPAPI {
                 .GET()
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        return new JSONArray(response.body());
+
+        if(response.body()!=null){
+            //JSONArray jsonArray = new JSONArray(response.body());
+            //System.out.println(jsonArray.toString());
+            return new JSONArray(response.body());
+        }else{
+            return new JSONArray();
+        }
     }
 
     public JSONArray getTableWithDate(char kind, String dateFrom, String dateTo) throws IOException, InterruptedException, URISyntaxException {
@@ -70,6 +105,13 @@ public class NBPAPI {
                 .GET()
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        return new JSONArray(response.body());
+
+        if(response.body()!=null){
+            //JSONArray jsonArray = new JSONArray(response.body());
+            //System.out.println(jsonArray.toString());
+            return new JSONArray(response.body());
+        }else{
+            return new JSONArray();
+        }
     }
 }

@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23a59a91-115c-488d-8ac6-db7fa6eb3a36" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/tests/NBPAPITests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
+    <list default="true" id="23a59a91-115c-488d-8ac6-db7fa6eb3a36" name="Changes" comment="Create a NBPAPITest class to test the NBPAPI class. Initialize basic attribute values and update the NBPAPI class as needed.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Activity/API/NBPAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Activity/API/NBPAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/NBPAPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/NBPAPITest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +39,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -55,6 +57,7 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.Main.executor": "Run",
+    "JUnit.NBPAPITest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -88,9 +91,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NBPAPITest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TurboCash" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.NBPAPITest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.NBPAPITest" />
       </list>
     </recent_temporary>
   </component>
@@ -115,7 +134,7 @@
       <workItem from="1754403223828" duration="12424000" />
       <workItem from="1754590314251" duration="9922000" />
       <workItem from="1754949675477" duration="8218000" />
-      <workItem from="1760790840943" duration="1328000" />
+      <workItem from="1760790840943" duration="3343000" />
     </task>
     <task id="LOCAL-00001" summary="Create initial project structure">
       <created>1753560597259</created>
@@ -221,14 +240,6 @@
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
       <updated>1753652973303</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Add getCurrencyInfo method in Calculator class to communicate with getCurrency method in NBPAPI class">
-      <option name="closed" value="true" />
-      <created>1753799683575</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1753799683575</updated>
     </task>
     <task id="LOCAL-00021" summary="Update throws in project by json-lib">
       <option name="closed" value="true" />
@@ -494,7 +505,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754956394576</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Create a NBPAPITest class to test the NBPAPI class. Initialize basic attribute values and update the NBPAPI class as needed.">
+      <option name="closed" value="true" />
+      <created>1760796837778</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1760796837778</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,7 +532,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add getDataTable method in Table class to transfer data between API and TablePanel class." />
     <MESSAGE value="Update TablePanel class. Add Table with data" />
     <MESSAGE value="Change datatype of getTableWithDate, getTableSeries, getTableActual methods in NBPAPI class" />
     <MESSAGE value="Update CalculatorPanel class" />
@@ -538,7 +556,8 @@
     <MESSAGE value="Add line chart in ChartPanle class" />
     <MESSAGE value="Add setChartData method in Chart class from NBPAPI" />
     <MESSAGE value="Update files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update files" />
+    <MESSAGE value="Create a NBPAPITest class to test the NBPAPI class. Initialize basic attribute values and update the NBPAPI class as needed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Create a NBPAPITest class to test the NBPAPI class. Initialize basic attribute values and update the NBPAPI class as needed." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
