@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23a59a91-115c-488d-8ac6-db7fa6eb3a36" name="Changes" comment="Add charts library like jfreechart-1.5.4.jar library to lib">
+    <list default="true" id="23a59a91-115c-488d-8ac6-db7fa6eb3a36" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/tests/NBPAPITests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Activity/API/NBPAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Activity/API/NBPAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Activity/Chart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Activity/Chart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Activity/Summary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Activity/Summary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Panels/ChartPanl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/ChartPanl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Panels/SummaryPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panels/SummaryPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +62,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/IdeProject/TurboCash/lib",
+    "last_opened_file_path": "C:/Users/SUPER-PC/Downloads/TurboCash-master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -116,7 +114,8 @@
       <workItem from="1754311132688" duration="15045000" />
       <workItem from="1754403223828" duration="12424000" />
       <workItem from="1754590314251" duration="9922000" />
-      <workItem from="1754949675477" duration="6386000" />
+      <workItem from="1754949675477" duration="8218000" />
+      <workItem from="1760790840943" duration="1328000" />
     </task>
     <task id="LOCAL-00001" summary="Create initial project structure">
       <created>1753560597259</created>
@@ -222,38 +221,6 @@
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
       <updated>1753652973303</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Create lib directory. Set lib dir as Main Project Library Directory. Add JSON library to project.">
-      <option name="closed" value="true" />
-      <created>1753799474134</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1753799474134</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Update getCurrency method in NBPAPI class">
-      <option name="closed" value="true" />
-      <created>1753799497245</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1753799497245</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Create currency data model in CurrencyData class.">
-      <option name="closed" value="true" />
-      <created>1753799567126</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1753799567126</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Add getCurrencyInfo method in Calculator class to communicate with getCurrency method in NBPAPI class">
-      <option name="closed" value="true" />
-      <created>1753799630222</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1753799630222</updated>
     </task>
     <task id="LOCAL-00020" summary="Add getCurrencyInfo method in Calculator class to communicate with getCurrency method in NBPAPI class">
       <option name="closed" value="true" />
@@ -487,7 +454,47 @@
       <option name="project" value="LOCAL" />
       <updated>1754952260530</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Add getCurrencySeries method in NBPAPI class">
+      <option name="closed" value="true" />
+      <created>1754956320532</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1754956320532</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Add line chart in ChartPanle class">
+      <option name="closed" value="true" />
+      <created>1754956343060</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1754956343061</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Add setChartData method in Chart class from NBPAPI">
+      <option name="closed" value="true" />
+      <created>1754956378225</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1754956378225</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Update files">
+      <option name="closed" value="true" />
+      <created>1754956388235</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1754956388235</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Update files">
+      <option name="closed" value="true" />
+      <created>1754956394576</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1754956394576</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,10 +513,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add getTableActual method in NBPAPI class to get actual curses table." />
-    <MESSAGE value="Add getTableWithDate method in NBPAPI class to get curses tables between dates." />
-    <MESSAGE value="Add CurrencyNameTranslatorAPI class" />
-    <MESSAGE value="Add translate method in CurrencyNameTranslatorAPI class to get currency name in english" />
     <MESSAGE value="Add getDataTable method in Table class to transfer data between API and TablePanel class." />
     <MESSAGE value="Update TablePanel class. Add Table with data" />
     <MESSAGE value="Change datatype of getTableWithDate, getTableSeries, getTableActual methods in NBPAPI class" />
@@ -531,7 +534,11 @@
     <MESSAGE value="        Update action buttons of btn7day, btn14day, btn1month in SummaryPanel class." />
     <MESSAGE value="Extract preparing json response to table data to getDataTableSeries method in Summary class" />
     <MESSAGE value="Add charts library like jfreechart-1.5.4.jar library to lib" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add charts library like jfreechart-1.5.4.jar library to lib" />
+    <MESSAGE value="Add getCurrencySeries method in NBPAPI class" />
+    <MESSAGE value="Add line chart in ChartPanle class" />
+    <MESSAGE value="Add setChartData method in Chart class from NBPAPI" />
+    <MESSAGE value="Update files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

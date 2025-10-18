@@ -12,7 +12,7 @@ import java.net.http.HttpResponse;
 import java.time.LocalDate;
 
 public class NBPAPI {
-    private HttpClient client;
+    protected HttpClient client;
 
     public NBPAPI(){
         this.client = HttpClient.newHttpClient();
